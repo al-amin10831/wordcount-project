@@ -1,0 +1,14 @@
+<h1>Welcome to word counter</h1>
+
+<h2>Your Input Text: "{{ fulltext }}"</h2>
+<p>There are <h2>{{ wordcount }}</h2> words</p>
+
+<h3>Given Words:</h3>
+
+{% for word,countotal in dictionary %}
+<br/>
+{{ word  }}:{{ countotal }}<br/>
+
+{% endfor %}
+
+<a href="{% url 'home' %}"><h1>Start Again?</h1></a>
